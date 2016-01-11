@@ -9,6 +9,7 @@ Vagrant.configure(2) do |config|
   config.vm.define 'control-machine' do |cm|
     cm.vm.hostname = 'control-machine'
     cm.vm.network :private_network, ip: '192.168.33.10'
+    cm.vm.provision :shell, :inline => 'yum install -y ansible.noarch'
   end
 
   # Managed nodes
