@@ -17,4 +17,14 @@ Vagrant.configure(2) do |config|
     mn1.vm.hostname = 'managed-node-1'
     mn1.vm.network :private_network, ip: '192.168.33.11'
   end
+
+  config.vm.define 'managed-node-2' do |mn2|
+    mn2.vm.hostname = 'managed-node-2'
+    mn2.vm.network :private_network, ip: '192.168.33.12'
+  end
+
+  config.vm.define 'managed-node-3' do |mn3|
+    mn3.vm.hostname = 'managed-node-3'
+    mn3.vm.network :private_network, ip: '192.168.33.13'
+  end
 end
